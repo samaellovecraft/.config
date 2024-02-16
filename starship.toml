@@ -1,0 +1,32 @@
+# ~/.config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+[╭╴](white bold)$all\
+[ ](bold yellow)
+[╰─](white bold)$character"""
+
+# Shows the username
+[username]
+style_user = 'bold yellow'
+style_root = 'bold yellow'
+format = '[\(]()[$user]($style)'
+disabled = false
+show_always = true
+
+# Shows the hostname
+[hostname]
+ssh_only = false
+format = '@[$hostname](bold yellow)[\)]()'
+disabled = false
+
+[directory]
+format = '[──]()[\[]()[$path]($style)[$read_only]($read_only_style)[\]]() '
+
+[character]
+success_symbol = '[❯](bold yellow)'
