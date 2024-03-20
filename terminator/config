@@ -13,14 +13,22 @@
     background_darkness = 0.85
     background_type = transparent
     cursor_fg_color = "#000000"
-    cursor_bg_color = "#aaaaaa"
+    cursor_bg_color = "#dde1e6"
     show_titlebar = False
     scrollbar_position = hidden
-    scrollback_lines = 2121
+    scrollback_lines = 10000
     palette = "#161616:#ee5396:#525252:#78a9ff:#be95ff:#42be65:#08bdba:#f2f4f8:#262626:#ff7eb6:#393939:#78a9ff:#82cfff:#dde1e6:#3ddbd9:#ffffff"
     copy_on_selection = True
 [layouts]
   [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = Oxocarbon Dark
+  [[lab]]
     [[[child0]]]
       type = Window
       parent = ""
@@ -28,7 +36,6 @@
       position = 0:35
       maximised = True
       fullscreen = False
-      size = 1910, 1009
       title = Playground
       last_active_window = True
     [[[child1]]]
