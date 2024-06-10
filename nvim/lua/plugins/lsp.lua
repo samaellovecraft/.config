@@ -9,7 +9,7 @@ return {
         priority = 1002,
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd", "asm_lsp" }
+                ensure_installed = { "lua_ls", "clangd", "asm_lsp", "gopls" }
             })
         end
     },
@@ -22,6 +22,7 @@ return {
             -- setup here
             lspconfig.lua_ls.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
+            lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.asm_lsp.setup({ capabilities = capabilities, root_dir = require('lspconfig.util').root_pattern('.asm-lsp.toml', '.git', '*.asm', '*.s', '*.S') })
         end,
         keys = {
