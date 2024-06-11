@@ -15,6 +15,6 @@ return {
     {"Take care of your pieces, and they will take care of you!", '', '- Some Chess Coach'},
     {"See how easily our technologies turn on us? The more power you think you have, the more quickly it slips from your grasp.", '', '- Deus Ex'},
     {"– How do you manage ADHD?", "– I don't. I manhandle it.", '- ThePrimeagen'},
-    {"Question everything", '', ''},
+    {"Question everything.", '', ''},
     -- {"", '', ''},
 }
