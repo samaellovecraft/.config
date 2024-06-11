@@ -43,9 +43,9 @@ return {
                 }),
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
-                    { name = 'luasnip' },
+                    { name = 'luasnip', keyword_length = 2 },
                 }, {
-                        { name = 'buffer' }, -- text within the current file
+                        { name = 'buffer', keyword_length = 3 }, -- text within the current file
                         { name = 'path' }, -- file path completions
                     })
             })
