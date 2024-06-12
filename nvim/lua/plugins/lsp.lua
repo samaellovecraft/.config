@@ -42,7 +42,8 @@ return {
         keys = {
             { 'K', vim.lsp.buf.hover, {} },
             { 'gd', vim.lsp.buf.definition, {} },
-            { mode = { 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {} }
+            { mode = { 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {} },
+            { 'rn', vim.lsp.buf.rename, {} },
         }
     },
     {
