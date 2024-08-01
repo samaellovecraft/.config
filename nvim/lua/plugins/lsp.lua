@@ -24,7 +24,7 @@ return {
                             settings = {
                                 Lua = {
                                     diagnostics = {
-                                        globals = { "vim" }
+                                        globals = { "vim", "jit" }
                                     }
                                 }
                             }
@@ -42,13 +42,24 @@ return {
         keys = {
             { 'K', vim.lsp.buf.hover, {} },
             { 'gd', vim.lsp.buf.definition, {} },
-            { mode = { 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {} },
-            { 'rn', vim.lsp.buf.rename, {} },
+            { '<leader>ca', vim.lsp.buf.code_action, {} },
+            { '<leader>rn', vim.lsp.buf.rename, {} },
+            { '<leader>ws', vim.lsp.buf.workspace_symbol, {} },
+            { '<leader>ref', vim.lsp.buf.references, {} },
+            { mode = {'i'}, '<C-h>', vim.lsp.buf.signature_help, {} },
+            { '<leader>d', vim.diagnostic.open_float, {} },
+            { '<leader>[d', vim.diagnostic.goto_next, {} },
+            { '<leader>]d', vim.diagnostic.goto_prev, {} },
         }
     },
     {
         "j-hui/fidget.nvim",
         opts = {
+            notification = {
+                window = {
+                    -- winblend = 0 -- Background color opacity in the notification window
+                }
+            },
             integration = {
                 ["nvim-tree"] = {
                     enable = true,
