@@ -7,26 +7,26 @@
 add_newline = true
 
 format = """
-[╭╴](white bold)$all\
-[ ](bold yellow)
-[╰─](white bold)$character"""
+[╭╴](#dde1e6 bold)$all\
+[ ](bold #ff7eb6)
+[╰─](#dde1e6 bold)$character"""
 
 # Shows the username
 [username]
-style_user = 'bold yellow'
-style_root = 'bold yellow'
-format = '[\(]()[$user]($style)'
+style_user = 'bold #ff7eb6'
+style_root = 'bold #ff7eb6'
+format = '[\(](#dde1e6 bold)[$user]($style)'
 disabled = false
 show_always = true
 
 # Shows the hostname
 [hostname]
 ssh_only = false
-format = '@[$hostname](bold yellow)[\)]()'
+format = '@(#dde1e6 bold)[$hostname](bold #ff7eb6)[\)](#dde1e6 bold)'
 disabled = false
 
 [directory]
-format = '[──]()[\[]()[$path]($style)[$read_only]($read_only_style)[\]]() '
+format = '[──](#dde1e6 bold)[\[](#dde1e6 bold)[$path](#33b1ff bold)[$read_only]($read_only_style)[\]](#dde1e6 bold) '
 
 [character]
-success_symbol = '[❯](bold yellow)'
+success_symbol = '[❯](bold #ff7eb6)'
