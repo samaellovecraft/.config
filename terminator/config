@@ -1,7 +1,8 @@
 [global_config]
   handle_size = 5
   window_state = maximise
-  suppress_multiple_term_dialog = True
+  ask_before_closing = never
+  always_split_with_profile = True
 [keybindings]
 [profiles]
   [[default]]
@@ -29,7 +30,7 @@
       type = Terminal
       parent = window0
       profile = Oxocarbon Dark
-  [[lab]]
+  [[htb]]
     [[[child0]]]
       type = Window
       parent = ""
@@ -37,14 +38,13 @@
       position = 0:35
       maximised = True
       fullscreen = False
-      title = Playground
+      title = HackTheBox
       last_active_window = True
     [[[child1]]]
       type = Notebook
       parent = child0
       order = 0
       labels = main, misc
-      last_active_term = 3a398f54-0fc3-4c2d-982f-aefcbae158f0, 189c6ff2-35a6-4284-b1bd-56a6b6db1075
       active_page = 0
     [[[child2]]]
       type = VPaned
@@ -64,12 +64,14 @@
       order = 0
       profile = Oxocarbon Dark
       uuid = 3a398f54-0fc3-4c2d-982f-aefcbae158f0
+      directory = /home/samael/Lab/HTB
     [[[terminal5]]]
       type = Terminal
       parent = child3
       order = 1
       profile = Oxocarbon Dark
       uuid = 249a411f-262d-4903-a6c6-b715e8689a3c
+      directory = /home/samael/Lab/HTB
     [[[child6]]]
       type = HPaned
       parent = child2
@@ -82,16 +84,19 @@
       order = 0
       profile = Oxocarbon Dark
       uuid = 2c21766b-1ccf-4422-9f25-70de1af9ec4e
+      directory = /home/samael/Lab/HTB
     [[[terminal8]]]
       type = Terminal
       parent = child6
       order = 1
       profile = Oxocarbon Dark
       uuid = 421128bd-3b77-4d86-a588-c329413d9802
+      directory = /home/samael/Lab/HTB
     [[[terminal9]]]
       type = Terminal
       parent = child1
       order = 1
       profile = Oxocarbon Dark
       uuid = 189c6ff2-35a6-4284-b1bd-56a6b6db1075
+      directory = /home/samael/Lab/VPN
 [plugins]
