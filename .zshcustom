@@ -1,0 +1,6 @@
+# add
+# source ~/.config/.zshcustom
+# to your .zshrc file to load this configuration
+
+# starship
+eval "$(starship init zsh)"
