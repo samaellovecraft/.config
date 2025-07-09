@@ -4,7 +4,10 @@ dotfiles_dir="$PWD"
 config_dir="$HOME/.config"
 
 homelist=(".zshrc")
-blacklist=("init.sh" ".git" ".gitignore" "wallpapers" ".ascii.art" ".colorized-ascii.art")
+blacklist=(
+    "init.sh" ".git" ".gitignore" "wallpapers" ".ascii.art" ".colorized-ascii.art"
+    "setupEnvironment.ps1" "WindowsTerminal"
+)
 
 # Function to check if an item is in a list
 contains() {
@@ -22,12 +25,12 @@ contains() {
 # Iterate through each item in the .dotfiles directory
 for item in "$dotfiles_dir"/{*,.*}; do
     # Extract the name of the item (without the path)
-    name=$(basename "$item") 
-    
+    name=$(basename "$item")
+
     if contains "${blacklist[@]}" "$name"; then
         continue
     fi
-    
+
     if contains "${homelist[@]}" "$name"; then
         # Remove the existing ~/$HOME/$name item (if it exists)
         #rm -rf "$HOME/$name"
@@ -44,4 +47,3 @@ for item in "$dotfiles_dir"/{*,.*}; do
 done
 
 echo "Symbolic links created successfully!"
-
